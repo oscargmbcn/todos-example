@@ -23,5 +23,13 @@
   "description": "This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app), which provides a simple way to start React projects with no build configuration needed.",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscargmbcn/todos-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oscargmbcn/todos-example/issues"
+  },
+  "homepage": "https://github.com/oscargmbcn/todos-example#readme"
 }
