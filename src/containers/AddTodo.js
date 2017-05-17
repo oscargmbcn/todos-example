@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-let AddTodo = ({ dispatch }) => {
+const AddTodo = ( { dispatch } ) => {
   let input
 
   return (
@@ -19,12 +20,18 @@ let AddTodo = ({ dispatch }) => {
           input = node
         }} />
         <button type="submit">
-          Add Todo
+          Add Todo (quick)
         </button>
       </form>
     </div>
   )
 }
-AddTodo = connect()(AddTodo)
 
-export default AddTodo
+AddTodo.propTypes = {
+  dispatch: PropTypes.func.isRequired
+}
+
+
+const AddTodoCnt = connect()(AddTodo)
+
+export default AddTodoCnt

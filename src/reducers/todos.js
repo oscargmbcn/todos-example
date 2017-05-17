@@ -1,4 +1,4 @@
-import { ACTION_ADD_TODO, ACTION_TOGGLE_TODO } from '../constants';
+import { ACTION_ADD_TODO, ACTION_TOGGLE_TODO } from '../constants'
 
 const newTodo = (action) => {
   return {
@@ -10,7 +10,7 @@ const newTodo = (action) => {
 
 const toogleTodo = (t, action) => {
   if (t.id !== action.id) {
-    return t;
+    return t
   }
   else {
     return {

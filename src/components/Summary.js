@@ -2,27 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FilterLink from '../containers/FilterLink'
 
-const Footer = ({ activeNum, completedNum }) => (
+const Summary = ({ activeNum, completedNum }) => (
   <p>
     Show:
-    {" "}
-    <FilterLink filter="SHOW_ALL">
+    {' '}
+    <FilterLink filter='SHOW_ALL'>
       All ({ activeNum + completedNum })
     </FilterLink>
-    {", "}
-    <FilterLink filter="SHOW_ACTIVE">
+    {', '}
+    <FilterLink filter='SHOW_ACTIVE'>
       Active ({ activeNum })
     </FilterLink>
-    {", "}
-    <FilterLink filter="SHOW_COMPLETED">
+    {', '}
+    <FilterLink filter='SHOW_COMPLETED'>
       Completed ({ completedNum })
     </FilterLink>
   </p>
 )
 
-Footer.propTypes = {
+Summary.propTypes = {
   activeNum: PropTypes.number.isRequired,
   completedNum: PropTypes.number.isRequired
 }
 
-export default Footer
+export default Summary

@@ -2,13 +2,15 @@ import { connect } from 'react-redux'
 import Summary from '../components/Summary'
 
 const getActiveNum = (todos) => {
-  let active = 0;
-  todos.map(t => {
-    if ( t.completed == false )
-    {
-      active++;
+  let active = todos.reduce( (acumulado, tActual) => {
+    let calculado = acumulado
+
+    if ( tActual.completed === false ) {
+      calculado++
     }
-  })
+
+    return calculado
+  }, 0)
 
   return active
 }
