@@ -4,6 +4,8 @@ const newTodo = (action) => {
   return {
     id: action.id,
     text: action.text,
+    priority: action.priority,
+    category: action.category,
     completed: false
   }
 }

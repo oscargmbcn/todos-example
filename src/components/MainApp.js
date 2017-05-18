@@ -1,17 +1,17 @@
 import React from 'react'
 //import Summary from './Summary'
-import AddTodo from '../containers/AddTodo'
+import AddTodoSimple from '../containers/AddTodoSimple'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import SummaryContainer from '../containers/SummaryContainer'
+import { Link } from 'react-router'
 
-const App = () => (
+const MainApp = () => (
   <div>
-    <AddTodo />
+    <AddTodoSimple />
     <SummaryContainer />
-    <p><a href="#">Add Todo (full)</a></p>
+    <p><Link to='/add-todo'>Add Todo (full)</Link></p>
     <VisibleTodoList />
-
   </div>
 )
 
-export default App
+export default MainApp

@@ -1,11 +1,21 @@
 import {ACTION_ADD_TODO, ACTION_TOGGLE_TODO, ACTION_SET_VISIBILITY_FILTER} from '../constants'
 
 let nextTodoId = 0
-export const addTodo = (text) => ({
+
+export const addTodoSimple = (text) => ({
   type: ACTION_ADD_TODO,
   id: nextTodoId++,
   text
 })
+
+export const addTodo = (text, priority, category) => ({
+  type: ACTION_ADD_TODO,
+  id: nextTodoId++,
+  text,
+  priority,
+  category
+})
+
 
 export const setVisibilityFilter = (filter) => ({
   type: ACTION_SET_VISIBILITY_FILTER,
