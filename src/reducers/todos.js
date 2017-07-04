@@ -1,4 +1,4 @@
-import { ACTION_ADD_TODO, ACTION_TOGGLE_TODO } from '../constants'
+import { ACTION_ADD_TODO, ACTION_MODIFY_TODO, ACTION_TOGGLE_TODO } from '../constants'
 
 const newTodo = (action) => {
   return {
@@ -22,6 +22,22 @@ const toogleTodo = (t, action) => {
   }
 }
 
+const modifyTodo = (t, action) => {
+  if (t.id !== action.id) {
+    return t
+  }
+  else {
+    return {
+      id: action.id,
+      text: action.text,
+      priority: action.priority,
+      category: action.category,
+      completed: action.completed
+    }
+  }
+}
+
+
 const todos = (state = [], action) => {
   switch (action.type) {
     case ACTION_ADD_TODO:
@@ -32,6 +48,10 @@ const todos = (state = [], action) => {
     case ACTION_TOGGLE_TODO:
       return state.map(t =>
         toogleTodo(t, action)
+      )
+    case ACTION_MODIFY_TODO:
+      return state.map(t =>
+        modifyTodo(t, action)
       )
     default:
       return state

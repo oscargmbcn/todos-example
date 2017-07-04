@@ -7,8 +7,8 @@ const ModifyTodo = ( { todo } ) => {
     <div>
         <p><b>Id:</b> {todo.id}</p>
         <p><b>Text:</b> <input type='text' defaultValue={todo.text}/></p>
-        <p><b>Priority:</b> <input type='text' value={todo.priority}/></p>
-        <p><b>Category:</b> <input type='text' value={todo.category}/></p>
+        <p><b>Priority:</b> <input type='text' defaultValue={todo.priority}/></p>
+        <p><b>Category:</b> <input type='text' defaultValue={todo.category}/></p>
         <p><b>Completed:</b> <input type='checkbox' defaultChecked={todo.completed}/></p>
     </div>
   )

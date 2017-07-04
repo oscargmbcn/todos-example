@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 import PropTypes from 'prop-types'
 import ModifyTodoContainer from '../containers/ModifyTodoContainer'
 
-const ModifyTodoApp = (props) => (
+const ModifyTodoApp = ({params}) => (
   <div>
-    <ModifyTodoContainer id={Number(props.params.id)}/>
+    <ModifyTodoContainer id={Number(params.id)}/>
     <Link to='/'>&lt;- Volver</Link>
   </div>
 )
